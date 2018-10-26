@@ -26,5 +26,30 @@ foreach my $e (@$r) {
 }
 
 
+print "Last Object For Demo--\n";
+print Dumper($last);
+	
+print "Searching the tweets";
+print "\n\n\n\n\n\n\n"	;
+
+
+my $r = $nt->search('Nirma University');
+foreach my $e (@{ $r->{statuses} }) {
+    print "$e->{user}{screen_name}:  $e->{text}";
+	print "\n";
+	print "-------------------\n";
+}
+
+$nt->update('Today is 5th October');
+
+#
+#my $user        = 'Postit29269537';
+#my $message_ack = "Hasta la vista, baby";
+
+#$nt->new_direct_message({ user => $user, text => $message_ack });
+
+
+
+print "Success";
 
 
